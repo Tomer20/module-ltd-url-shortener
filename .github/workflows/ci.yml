@@ -36,6 +36,7 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           ALLOWED_ORIGINS: ${{ secrets.ALLOWED_ORIGINS }}

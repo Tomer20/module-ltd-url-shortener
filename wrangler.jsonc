@@ -9,36 +9,48 @@
 	"compatibility_date": "2025-05-21",
 	"observability": {
 		"enabled": true
-	}
+	},
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
 	 */
 	// "placement": { "mode": "smart" },
-
 	/**
 	 * Bindings
 	 * Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
 	 * databases, object storage, AI inference, real-time communication and more.
 	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
-
+	"kv_namespaces": [
+		{
+			"binding": "LINKS",
+			"id": "1ee7ff42d7ee45ca975aa02d9f13142f"
+		}
+	],
 	/**
-	 * Environment Variables
-	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
-	 */
-	// "vars": { "MY_VARIABLE": "production_value" },
+	* Environment Variables
+	* https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+	*/
+	"vars": {
+		// Values used for local development and as defaults
+		"ALLOWED_ORIGINS": "localhost:8787",
+		"AUTH_TOKEN": "dev_token_for_testing_only"
+	},
 	/**
-	 * Note: Use secrets to store sensitive data.
+	 * Note: For production, use secrets to override these values:
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
+	 * 
+	 * Set AUTH_TOKEN using: wrangler secret put AUTH_TOKEN
+	 * Set ALLOWED_ORIGINS using: wrangler secret put ALLOWED_ORIGINS
+	 * 
+	 * The values in "vars" above are used for local development,
+	 * but will be overridden by secrets in production.
 	 */
-
 	/**
 	 * Static Assets
 	 * https://developers.cloudflare.com/workers/static-assets/binding/
 	 */
 	// "assets": { "directory": "./public/", "binding": "ASSETS" },
-
 	/**
 	 * Service Bindings (communicate between multiple Workers)
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings

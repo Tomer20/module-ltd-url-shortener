@@ -1,6 +1,6 @@
 # Module LTD URL Shortener
 
-[![CI/CD](https://github.com/username/module-ltd-url-shortener/actions/workflows/ci.yml/badge.svg)](https://github.com/username/module-ltd-url-shortener/actions/workflows/ci.yml)
+[![CI/CD](https://github.com/Tomer20/module-ltd-url-shortener/actions/workflows/ci.yml/badge.svg)](https://github.com/Tomer20/module-ltd-url-shortener/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/badge/version-0.0.0-blue.svg)](./package.json)
 [![Code Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](./coverage/index.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
